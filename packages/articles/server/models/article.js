@@ -3,9 +3,13 @@
 /**
  * Module dependencies.
  */
+
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
+
+  // neo4jSchema = require('./article_neo4j');
+  // console.log("neo4jSchema: "+neo4jSchema)
 
 /**
  * Article Schema
@@ -30,6 +34,8 @@ var ArticleSchema = new Schema({
     ref: 'User'
   }
 });
+ module.exports = ArticleSchema
+
 
 /**
  * Validations
@@ -52,3 +58,5 @@ ArticleSchema.statics.load = function(id, cb) {
 };
 
 mongoose.model('Article', ArticleSchema);
+
+////

@@ -2,6 +2,7 @@
 
 module.exports = {
   db: 'mongodb://' + (process.env.MONGOLAB_URI || 'localhost') + '/mean-dev',
+  graphdb: 'neodb://' + (process.env.NEO_DB || 'localhost') + '/mean-dev', // this is fake
   debug: true,
   logging: {
     format: 'tiny'
@@ -12,7 +13,7 @@ module.exports = {
     debug: false
   },
   app: {
-    name: 'MEAN - FullStack JS - Development'
+    name: 'localHost3000'
   },
   facebook: {
     clientID: 'DEFAULT_APP_ID',
